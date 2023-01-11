@@ -1,7 +1,9 @@
 <?php
+namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Jogos;
+use App\Models\JogosModel;
+
 
 class JogosTableSeeder extends Seeder
 {
@@ -12,15 +14,14 @@ class JogosTableSeeder extends Seeder
      */
     public function run()
     {
-        Jogos::create([
+        JogosModel::create([
             'nome' => 'Zelda',
             'nota' => 10
         ]);
 
-        Jogos::create([
+        JogosModel::create([
             'nome' => 'Volverine the game',
             'nota' => 8
-        ]);
-        
+        ]);   
     }
 }

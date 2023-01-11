@@ -2,7 +2,7 @@
 
 namespace App\Interfaces;
 
-interface ModelInterface
-{
+interface IJogosModel
+{ 
     public function getAll();
 }

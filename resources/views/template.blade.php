@@ -2,8 +2,9 @@
 <html>
 <head>
     <title>Localmente Local Games List</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather-icons.min.css">
 
 
 </head>
@@ -22,12 +23,15 @@
         </ul>
     </nav>
 </header>
-
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+      feather.replace()
+    </script>
 
     <main>
         @yield('content')
     </main>
-
+  
     <footer>
         <!-- código para o rodapé -->
     </footer>

@@ -10,6 +10,7 @@ class HomeController extends Controller
 {
     public function index(): View
     {
+        
          return view('home')->with('jogos', JogosModel::getAll());
     }
 

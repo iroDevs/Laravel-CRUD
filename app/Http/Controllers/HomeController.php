@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\JogosModel;
+use Illuminate\View\View;
 
 class HomeController extends Controller 
 {
-    function index() 
+    public function index(): View
     {
-        
+         return view('home')->with('jogos', JogosModel::getAll());
     }
+
 }

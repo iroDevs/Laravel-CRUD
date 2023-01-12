@@ -9,14 +9,12 @@ use Illuminate\Database\QueryException;
 
 class JogosModel extends Model 
 {
-    protected $table = 'jogos'; //nome da tabela do banco de dados
-    protected $fillable = ['nome', 'nota']; //campos que são permitidos para preenchimento
+    protected $table = 'jogos';
+    protected $fillable = ['nome', 'nota'];
 
   
-    public function getAll()
+    public static function getAll() : array
     {
-        //código para o método 2
+        return JogosModel::all()->toArray();
     }
-
-    //outros métodos
 }

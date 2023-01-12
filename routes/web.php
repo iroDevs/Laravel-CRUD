@@ -5,5 +5,6 @@ use App\Http\Controllers\HomeController;
 
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/criar', [HomeController::class, 'criar'])->name('criar');
 
 

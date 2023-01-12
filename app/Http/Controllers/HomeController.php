@@ -14,4 +14,9 @@ class HomeController extends Controller
          return view('home')->with('jogos', JogosModel::getAll());
     }
 
+    public function criar()
+    {
+        return view('criar');
+    }
+
 }

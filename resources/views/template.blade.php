@@ -17,7 +17,7 @@
         </div>
         <ul class="nav-bar-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#create">Criar</a></li>
+            <li><a  href="{{ route('criar') }}">Criar</a></li>
             <li><a href="#about">Sobre</a></li>
             <li><a href="#reason">Motivo</a></li>
         </ul>

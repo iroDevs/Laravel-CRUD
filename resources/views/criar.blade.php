@@ -11,7 +11,7 @@
             <input type="text" class="form-control" id="nomeJogo" placeholder="Insira o nome do jogo">
 
             <label for="notaJogo">Nota</label>
-            <input type="number" class="form-control" id="nomeJogo" placeholder="Insira a nota do jogo">
+            <input type="number" class="form-control" id="notaJogo" placeholder="Insira a nota do jogo">
         </div>
         <button type="button" id="add-game" class="btn btn-primary btn-block">Adicionar</button>
         <h2 id="alert" class="text-center mb-4 hide">Criado Com sucesso</h2>

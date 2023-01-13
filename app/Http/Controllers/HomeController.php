@@ -22,14 +22,12 @@ class HomeController extends Controller
     public function adcionaJogo(Request $jogoNovo): bool
     {   
         try {
-            $dados = $jogoNovo->only(['nomeJogo', 'notaJogo']);
-            dd($dados);
-            
+            $dados = $jogoNovo->only(['nomeJogo', 'notaJogo']);  
             JogosModel::create([
                 'nome' => $dados["nomeJogo"],
-                'nota' => $dados["notaJogo"]
+                'nota' => (int)$dados["notaJogo"]
             ]); 
-            
+
             return true;
         } catch (\Throwable $th) {
             dump($th);

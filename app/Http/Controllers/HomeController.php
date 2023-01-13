@@ -30,9 +30,22 @@ class HomeController extends Controller
 
             return true;
         } catch (\Throwable $th) {
-            dump($th);
+            error_log($th->getMessage());
             return false;
         }
     }
+
+    public function deletaJogo(int $id): bool
+    {   
+        try {
+            JogosModel::deleteById($id);
+            return true;
+        } catch (\Throwable $th) {
+            error_log($th->getMessage());
+            return false;
+        }
+        
+    }
+
 
 }

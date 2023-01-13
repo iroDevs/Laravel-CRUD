@@ -17,4 +17,10 @@ class JogosModel extends Model
     {
         return JogosModel::all()->toArray();
     }
+
+    public static function deleteById(int $id): bool
+    {
+       return JogosModel::findOrFail($id)->delete();
+    }
+
 }

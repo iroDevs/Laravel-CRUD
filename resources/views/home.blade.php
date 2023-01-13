@@ -14,17 +14,36 @@
         </thead>
         <tbody>
             @foreach($jogos as $jogo)
-                <tr>
+                <tr data-id="{{ $jogo['id'] }}">
                     <td>{{ $jogo['id'] }}</td>
                     <td>{{ $jogo['nome'] }}</td>
                     <td>{{ $jogo['nota'] }}</td>
                     <td>
-                        <a href="#" class="btn btn-danger"> <i class="fas fa-trash"></i> </a>
-                        <a href="#" class="btn btn-primary"> <i class="fas fa-edit"></i> </a>
+                         <i id="lixo"  data-id="{{ $jogo['id'] }}" class="fas fa-trash"></i>
+                         <i  data-id="{{ $jogo['id'] }}" id="editar" class="fas fa-edit"></i> 
                     </td>
                 </tr>
             @endforeach
         </tbody>
     </table>
+
+    <script>  
+      $(document).ready(function() {
+    $('.fas.fa-trash').click(function() {
+        let id = $(this).data('id');
+        $.ajax({
+            url: '/home/' + id,
+            type: 'delete',
+            data: { _token: '{{ csrf_token() }}', id: id },
+            success: function(data) {
+                console.log("elemento: ",id," elemento deletado");
+                $(`tr[data-id=${id}]`).remove();
+            }
+        });
+    });
+});
+
+
+    </script>
 </div>
 @endsection

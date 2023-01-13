@@ -54,7 +54,7 @@ Main Home
 .main-home{
     width: 100%;
     height: 100vh;
-    color: rgb(0, 80, 4);
+    color: rgb(1, 121, 7);
     background-color: rgb(10, 10, 10);
     }
     table{
@@ -112,7 +112,7 @@ Criar Home
     color: white;
     }
     
-    .form-container input[type="text"] {
+    .form-container input {
     border: none;
     border-bottom: 2px solid white;
     background-color: transparent;
@@ -127,7 +127,22 @@ Criar Home
     outline: none;
     }
     
-    .form-container button[type="submit"] {
+    .hide
+    {
+        display: none;
+    }
+
+    .text-red
+    {
+        color: rgb(105, 0, 0);
+    }
+
+    .text-green 
+    {
+        color: rgb(0, 80, 0);
+    }
+
+    .form-container button{
     background-color: #1abc9c;
     color: white;
     padding: 10px 20px;

@@ -14,9 +14,27 @@ class HomeController extends Controller
          return view('home')->with('jogos', JogosModel::getAll());
     }
 
-    public function criar()
+    public function criar(): View
     {
         return view('criar');
+    }
+
+    public function adcionaJogo(Request $jogoNovo): bool
+    {   
+        try {
+            $dados = $jogoNovo->only(['nomeJogo', 'notaJogo']);
+            dd($dados);
+            
+            JogosModel::create([
+                'nome' => $dados["nomeJogo"],
+                'nota' => $dados["notaJogo"]
+            ]); 
+            
+            return true;
+        } catch (\Throwable $th) {
+            dump($th);
+            return false;
+        }
     }
 
 }

@@ -12,7 +12,7 @@ header {
     background-color: #000000;
     color: #999999;
     padding: 15px;
- 
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -32,6 +32,8 @@ header .nav-bar-links {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
 header .nav-bar-links li {
@@ -55,7 +57,10 @@ Main Home
     width: 100%;
     height: 100vh;
     color: rgb(1, 121, 7);
-    background-color: rgb(10, 10, 10);
+    background-color: rgba(211, 229, 220, 0.432)
+    display: flex;
+    align-items: center;
+    justify-content: center;
     }
     table{
     font-size: 1.2rem;
@@ -64,10 +69,6 @@ Main Home
     padding-left: 70px;
     padding-right: 70px;
     border-radius: 5%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     }
     table tr td,th {
         padding: 20px;
@@ -164,7 +165,63 @@ Criar Home
     width: 90%;
     }
 }
+.icone {
+    margin-left: 20px;
+}
 
+.icone:hover {
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+    color: #00ff00;
+}
+
+
+body {
+    background-color: #e2e2e2;
+    color: white;
+}
+
+/* Centralização horizontal e vertical */
+.main-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Tabela */
+table {
+    background-color: #2b2b2b;
+    color: white;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto; /* Centralização horizontal */
+}
+
+/* Cabeçalho da tabela */
+thead th {
+    background-color: #4caf50;
+    color: white;
+    padding: 1rem;
+}
+
+/* Células da tabela */
+td {
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Destaque para a tabela */
+table {
+    box-shadow: 0 0 10px #4caf50;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+}
 
 
 /* media query for mobile view */

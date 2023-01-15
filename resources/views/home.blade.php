@@ -19,8 +19,8 @@
                     <td>{{ $jogo['nome'] }}</td>
                     <td>{{ $jogo['nota'] }}</td>
                     <td>
-                         <i id="lixo"  data-id="{{ $jogo['id'] }}" class="fas fa-trash"></i>
-                         <i  data-id="{{ $jogo['id'] }}" id="editar" class="fas fa-edit"></i> 
+                         <i id="lixo"  data-id="{{ $jogo['id'] }}" class="fas fa-trash icone"></i>
+                         <i  data-id="{{ $jogo['id'] }}" id="editar" class="fas fa-edit icone"></i> 
                     </td>
                 </tr>
             @endforeach

@@ -18,9 +18,24 @@ class JogosModel extends Model
         return JogosModel::all()->toArray();
     }
 
+    public static function getById(int $id) : array
+    {
+        return self::find($id);
+    }
+
     public static function deleteById(int $id): bool
     {
        return JogosModel::findOrFail($id)->delete();
     }
+
+    public static function updatedById(int $id, array $updateGame): bool
+{
+    $game = self::find($id);
+    if($game){
+        $game->update($updateGame);
+        return true;
+    }
+    return false;
+}
 
 }

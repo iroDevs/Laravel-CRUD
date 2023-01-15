@@ -19,6 +19,7 @@ class HomeController extends Controller
         return view('criar');
     }
 
+   
     public function adcionaJogo(Request $jogoNovo): bool
     {   
         try {
@@ -45,6 +46,23 @@ class HomeController extends Controller
             return false;
         }
         
+    }
+
+    public function editaJogo(int $id,Request $jogoNovo): bool
+    {   
+        try {
+            $dados = $jogoNovo->only(['nomeJogo', 'notaJogo']);  
+            JogosModel::updatedById($id,
+            [
+                'nome' => $dados["nomeJogo"],
+                'nota' => (int)$dados["notaJogo"]
+            ]); 
+
+            return true;
+        } catch (\Throwable $th) {
+            error_log($th->getMessage());
+            return false;
+        }
     }
 
 
